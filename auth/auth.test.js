@@ -17,11 +17,10 @@ describe("auth router", () => {
             });
             
             const users = await db("users");
-
             expect(users).toHaveLength(1);
-
             expect(res.status).toBe(201);
         })
+
         it("should return json", async () => {
             await request(server)
                 .post("/api/auth/register").send({

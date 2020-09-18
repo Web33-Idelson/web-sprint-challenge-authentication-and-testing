@@ -26,11 +26,20 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
 
+The main difference is scalability because session cookies are stored in the server's memory, it has the potential of using a lot more resources if the website or app gets a lot of traffic. Because jwt are stateless they can potentially save on server resources.
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
+We use bcrypt to securely hash and salt passwords. Also,
+using a Key Factor, BCrypt is able to adjust the cost of hashing. With Key Factor changes, the hash output can be influenced. In this way, BCrypt remains extremely resistant to hacks, especially a type of password cracking called rainbow table. 
 
 3. How are unit tests different from integration and end-to-end testing.
 
+Unit tests always work and they are not flaky. Unlike end-to-end testing, unit tests do not rely on external components. The one major advantage that integration tests have over unit tests is that they ensure that modules which work well in isolation, also play well together. 
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
+
+Because TDD is an approach where we are writing test cases, developed to specify and validate what the code will do. Test cases for different functionalities are created and tested to make sure the test can fail, then re-written to make them pass. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
